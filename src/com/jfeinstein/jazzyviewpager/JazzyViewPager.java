@@ -164,41 +164,6 @@ public class JazzyViewPager extends ViewPager {
 		GOING_LEFT,
 		GOING_RIGHT
 	}
-	
-//	public void reset() {
-//	resetPrivate();
-//	int curr = getCurrentItem();
-//	onPageScrolled(curr, 0.0f, 0);
-//}
-//
-//private void resetPrivate() {
-//	for (int i = 0; i < getChildCount(); i++) {
-//		View v = getChildAt(i);
-//		//			ViewHelper.setRotation(v, -ViewHelper.getRotation(v));
-//		//			ViewHelper.setRotationX(v, -ViewHelper.getRotationX(v));
-//		//			ViewHelper.setRotationY(v, -ViewHelper.getRotationY(v));
-//		//
-//		//			ViewHelper.setTranslationX(v, -ViewHelper.getTranslationX(v));
-//		//			ViewHelper.setTranslationY(v, -ViewHelper.getTranslationY(v));
-//
-//		ViewHelper.setRotation(v, 0);
-//		ViewHelper.setRotationX(v, 0);
-//		ViewHelper.setRotationY(v, 0);
-//
-//		ViewHelper.setTranslationX(v, 0);
-//		ViewHelper.setTranslationY(v, 0);
-//
-//		ViewHelper.setAlpha(v, 1.0f);
-//
-//		ViewHelper.setScaleX(v, 1.0f);
-//		ViewHelper.setScaleY(v, 1.0f);
-//
-//		ViewHelper.setPivotX(v, 0);
-//		ViewHelper.setPivotY(v, 0);
-//
-//		logState(v, "Child " + i);
-//	}
-//}
 
 	private void logState(View v, String title) {
 		Log.v(TAG, title + ": ROT (" + ViewHelper.getRotation(v) + ", " +
@@ -496,8 +461,6 @@ public class JazzyViewPager extends ViewPager {
 
 		float effectOffset = isSmall(positionOffset) ? 0 : positionOffset;
 		
-//		mLeft = getChildAt(position);
-//		mRight = getChildAt(position+1);
 		mLeft = findViewFromObject(position);
 		mRight = findViewFromObject(position+1);
 		
